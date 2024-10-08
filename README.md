@@ -36,8 +36,8 @@ oc -n easytravel apply -f ./manifests
 
 # to access the frontend EasyTrade UI
 # create a route in OpenShift for the frontendreverseproxy-easytrade service
-oc expose svc/frontendreverseproxy-easytrade --name=easytrade-frontend -n easytrade
-oc get route/easytrade-frontend
+oc expose svc/easytravel-frontend --name=easytravel-frontend -n easytravel
+oc get route/easytravel-frontend
 
 # to delete the deployment
 oc delete easytravel
