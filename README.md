@@ -32,7 +32,7 @@ oc adm policy add-scc-to-user anyuid -z default -n easytravel
 
 # then use the manifests to deploy the EasyTrade resources
 # wait until all the pods for the app are up and running
-oc -n easytravel apply -f ./manifests
+./scripts/create_easytravel_loadgen.sh
 
 # to access the frontend EasyTrade UI
 # create a route in OpenShift for the frontendreverseproxy-easytrade service
